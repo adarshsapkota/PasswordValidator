@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import RequirementItem from "./RequirementItem";
 import "./PasswordValidator.css";
 
@@ -39,41 +40,58 @@ function PasswordValidator() {
     strengthPercent < 50 ? "weak" : strengthPercent < 80 ? "medium" : "strong";
 
   return (
-    <div className="validator">
-      <h2>Password Strength Checker</h2>
-      <div className="input-container">
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          placeholder="Enter your password"
-          className="password-input"
-        />
+    <div>
+      <div className="navigation">
+        <Link to="/hooks" className="Back">
+          Hooks
+        </Link>
+        <Link to="/fetch" className="Fetch-Page">
+          Fetch Page
+        </Link>
+        <Link to="/ProfileCard" className="Profilecard-Page">
+          Profile Card
+        </Link>
       </div>
-
-      <ul className="requirements-list">
-        {requirements.map((req) => (
-          <RequirementItem key={req.id} text={req.text} isValid={req.isValid} />
-        ))}
-      </ul>
-
-      <div className="strength-meter">
-        <div className="strength-bar-container">
-          <div
-            className={`strength-bar ${strengthClass}`}
-            style={{ width: `${strengthPercent}%` }}
-          ></div>
+      <div className="validator">
+        <h2>Password Strength Checker</h2>
+        <div className="input-container">
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="Enter your password"
+            className="password-input"
+          />
         </div>
-        <div className="strength-text">
-          Strength:{" "}
-          <span className={`${strengthClass}-text`}>
-            {strengthPercent < 50
-              ? "Weak"
-              : strengthPercent < 80
-              ? "Medium"
-              : "Strong"}
-          </span>{" "}
-          ({strengthPercent}%)
+
+        <ul className="requirements-list">
+          {requirements.map((req) => (
+            <RequirementItem
+              key={req.id}
+              text={req.text}
+              isValid={req.isValid}
+            />
+          ))}
+        </ul>
+
+        <div className="strength-meter">
+          <div className="strength-bar-container">
+            <div
+              className={`strength-bar ${strengthClass}`}
+              style={{ width: `${strengthPercent}%` }}
+            ></div>
+          </div>
+          <div className="strength-text">
+            Strength:{" "}
+            <span className={`${strengthClass}-text`}>
+              {strengthPercent < 50
+                ? "Weak"
+                : strengthPercent < 80
+                ? "Medium"
+                : "Strong"}
+            </span>{" "}
+            ({strengthPercent}%)
+          </div>
         </div>
       </div>
     </div>

@@ -1,12 +1,20 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import PasswordValidator from "./Components/PasswordValidator";
 import "./App.css";
+import FetchPage from "./Components/fetch";
+import Hooks from "./Components/hooks";
+import ProfileCard from "./Components/ProfileCard";
 
 function App() {
   return (
-    <div className="app">
-      <h1>Password Validator</h1>
-      <PasswordValidator />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<PasswordValidator />} />
+        <Route path="/fetch" element={<FetchPage />} />
+        <Route path="/hooks" element={<Hooks />} />
+        <Route path="/ProfileCard" element={<ProfileCard />} />
+      </Routes>
+    </Router>
   );
 }
 
