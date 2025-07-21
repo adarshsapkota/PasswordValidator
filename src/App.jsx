@@ -5,7 +5,6 @@ import "./App.css";
 import FetchPage from "./Components/fetch";
 import Hooks from "./Components/hooks";
 import ProfileCard from "./Components/ProfileCard";
-import Favourites from "./Components/Favourites";
 import Todo from "./Components/Todo";
 
 function App() {
@@ -30,7 +29,6 @@ function App() {
         <Route path="/fetch" element={<FetchPage />} />
         <Route path="/hooks" element={<Hooks />} />
         <Route path="/ProfileCard" element={<ProfileCard />} />
-        <Route path="/Favourites" element={<Favourites />} />
         <Route path="/Todo" element={<Todo />} />
       </Routes>
     </Router>
