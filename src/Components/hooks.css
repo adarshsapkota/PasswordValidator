@@ -1,14 +1,16 @@
 .Fetch-Container {
+  margin-top: 60px;
+  margin-left: 350px;
   padding: 20px;
   max-width: 800px;
-  margin: 0 auto;
 }
 
 .Data-Container {
-  background: #475569;
+  /* background: #475569; */
   padding: 20px;
   border-radius: 5px;
   margin: 20px 0;
+  border: 2px solid black;
 }
 
 .Back {

@@ -6,14 +6,23 @@ import FetchPage from "./Components/fetch";
 import Hooks from "./Components/hooks";
 import ProfileCard from "./Components/ProfileCard";
 import Favourites from "./Components/Favourites";
-import UserListViewer from "./Components/UserListViewer";
+import Todo from "./Components/Todo";
 
 function App() {
   return (
     <Router basename="/PasswordValidator">
       <div className="navigation">
-        <Link to="UserListViewer" className="Back">
-          User List Viewer
+        <Link to="/" className="link">
+          Home
+        </Link>
+        <Link to="/hooks" className="link">
+          Hooks
+        </Link>
+        <Link to="/ProfileCard" className="link">
+          Profile Card
+        </Link>
+        <Link to="/Todo" className="link">
+          Todo
         </Link>
       </div>
       <Routes>
@@ -22,7 +31,7 @@ function App() {
         <Route path="/hooks" element={<Hooks />} />
         <Route path="/ProfileCard" element={<ProfileCard />} />
         <Route path="/Favourites" element={<Favourites />} />
-        <Route path="/UserListViewer" element={<UserListViewer />} />
+        <Route path="/Todo" element={<Todo />} />
       </Routes>
     </Router>
   );

@@ -3,10 +3,16 @@
   align-items: center;
   justify-content: center;
   padding: 2rem;
-  background-color: #1e293b;
+  background-color: #f5f7fa;
   font-family: "Segoe UI", system-ui, sans-serif;
   color: #f5f7fa;
 }
 .navigation {
   padding-bottom: 10px;
+  margin-bottom: 20px;
+  position: fixed;
+  height: 60px;
+  border-bottom: 1px;
+  background-color: #f5f7fa;
+  border: 2px solid black;
 }

@@ -41,17 +41,6 @@ function PasswordValidator() {
 
   return (
     <div>
-      <div className="navigation">
-        <Link to="/hooks" className="Back">
-          Hooks
-        </Link>
-        <Link to="/fetch" className="Fetch-Page">
-          Fetch Page
-        </Link>
-        <Link to="/ProfileCard" className="Profilecard-Page">
-          Profile Card
-        </Link>
-      </div>
       <div className="validator">
         <h2>Password Strength Checker</h2>
         <div className="input-container">

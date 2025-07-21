@@ -81,9 +81,6 @@ function DisplayCard({ name, age, image, email }) {
         <Link to="/" className="Back">
           Password Validator
         </Link>
-        <Link to="UserListViewer" className="Back">
-          User List Viewer
-        </Link>
       </div>
     </div>
   );

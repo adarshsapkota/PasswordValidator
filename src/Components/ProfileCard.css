@@ -10,8 +10,8 @@
 input {
   width: 20%;
   padding: 10px;
-  color: white;
-  background-color: #475569;
+  color: black;
+  /* background-color: #475569; */
   border-color: black;
   gap: 20px;
 }
@@ -39,7 +39,7 @@ input {
   max-width: 400px;
   width: 100%;
   text-align: center;
-  background: #334155;
+  /* background: #334155; */
 }
 
 .image {
@@ -54,6 +54,6 @@ input {
 .card-details p {
   margin: 15px 0;
   font-size: 20px;
-  color: white;
+  color: black;
   font-weight: 500;
 }
